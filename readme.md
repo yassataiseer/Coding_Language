@@ -8,7 +8,7 @@ Building a language in Go called "Monkey", made off of a tutorial but adding my 
 ### Features I want to add
 
 - [ ] Support for floats/doubls
-- [x] Emojis support
-- [x] More DS
+- [ ] Emojis support
+- [ ] More DS
 
 
