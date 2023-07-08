@@ -52,17 +52,18 @@ func (l *Lexer) NextToken() token.Token {
 		case 0:
 			tok.Literal = ""
 			tok.Type = token.EOF
-	default:
-		if isLetter(l.ch){//check if its a letter
-			tok.Literal =  l.readIdentifier()
-			return tok
-		} else if isDigit(l.ch) {
-			tok.Type = token.INT
-			tok.Literal = l.readNumber()
-			return tok
+		default:
+			if isLetter(l.ch){//check if its a letter
+				tok.Literal =  l.readIdentifier()
+				tok.Type = token.LookupIdent(tok.Literal)
+				return tok
+			} else if isDigit(l.ch) {
+				tok.Type = token.INT
+				tok.Literal = l.readNumber()
+				return tok
 			}else {
-			tok = newToken(token.ILLEGAL, l.ch)
-		}
+				tok = newToken(token.ILLEGAL, l.ch)
+				}
 	}
 	
 	l.readChar()
