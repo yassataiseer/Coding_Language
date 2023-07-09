@@ -90,7 +90,7 @@ func (l *Lexer) NextToken() token.Token {
 
 
 	func isLetter(ch byte) bool {
-		return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ch=='!' || ch=='?' 
+		return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' 
 		}// this is where you add more characters for the compiler to recognize
 
 
