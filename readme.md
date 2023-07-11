@@ -10,5 +10,6 @@ Building a language in Go called "Monkey", made off of a tutorial but adding my 
 - [ ] Support for floats/doubls
 - [ ] Emojis support
 - [ ] More DS
+- [ ] While Loops
 
 
